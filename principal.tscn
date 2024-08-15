@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://1nkr51q1k4ry"]
+
+[ext_resource type="Texture2D" uid="uid://b83nvmja6ns7v" path="res://icon.svg" id="1_aguxp"]
+[ext_resource type="Script" path="res://figurinha.gd" id="2_80mwl"]
+
+[node name="Principal" type="Node2D"]
+
+[node name="Figurinha" type="Sprite2D" parent="."]
+scale = Vector2(0.976563, 0.976563)
+texture = ExtResource("1_aguxp")
+script = ExtResource("2_80mwl")
