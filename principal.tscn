@@ -1,11 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://1nkr51q1k4ry"]
+[gd_scene load_steps=4 format=3 uid="uid://5nj1vs36cyph"]
 
-[ext_resource type="Texture2D" uid="uid://b83nvmja6ns7v" path="res://icon.svg" id="1_aguxp"]
-[ext_resource type="Script" path="res://figurinha.gd" id="2_80mwl"]
+[ext_resource type="Script" path="res://principal.gd" id="1_e8kwb"]
+[ext_resource type="Script" path="res://character_body_2d.gd" id="2_7reyf"]
+[ext_resource type="Texture2D" uid="uid://1r7qt7ahl27g" path="res://icon.svg" id="2_ao1u2"]
 
 [node name="Principal" type="Node2D"]
+script = ExtResource("1_e8kwb")
+numero_magico = 6
 
-[node name="Figurinha" type="Sprite2D" parent="."]
-scale = Vector2(0.976563, 0.976563)
-texture = ExtResource("1_aguxp")
-script = ExtResource("2_80mwl")
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("2_7reyf")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("2_ao1u2")
